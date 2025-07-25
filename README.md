@@ -28,62 +28,59 @@ This is a full‑stack food delivery application built using React (frontend), N
 
 ## 📁 Project Structure
 
-Food-delivery/
-│
-├── backend/                      # Node.js + Express backend
-│   ├── config/
+Food-delivery
+├── backend
+│   ├── config
 │   │   └── db.js
-│   ├── controllers/
+│   ├── controllers
 │   │   ├── cartController.js
 │   │   ├── foodController.js
 │   │   ├── orderController.js
 │   │   └── userController.js
-│   ├── middleware/
+│   ├── middleware
 │   │   └── auth.js
-│   ├── models/
+│   ├── models
 │   │   ├── foodModel.js
 │   │   ├── orderModel.js
 │   │   └── userModel.js
-│   ├── routes/
+│   ├── routes
 │   │   ├── cartRoute.js
 │   │   ├── foodRoute.js
 │   │   ├── orderRoute.js
 │   │   └── userRoute.js
-│   └── uploads/                 # For storing static files/images
+│   └── uploads
 │
-├── frontend/                     # React client for users
-│   ├── public/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── Context/
-│   │   ├── pages/
-│   │   │   ├── Cart/
-│   │   │   ├── Home/
-│   │   │   ├── MyOrders/
-│   │   │   ├── PlaceOrder/
-│   │   │   │   ├── PlaceOrder.jsx
-│   │   │   │   └── PlaceOrder.css
-│   │   │   └── Verify/
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── index.html
-│   └── package.json
+├── frontend
+│   ├── public
+│   └── src
+│       ├── assets
+│       ├── components
+│       ├── Context
+│       ├── pages
+│       │   ├── Cart
+│       │   ├── Home
+│       │   ├── MyOrders
+│       │   ├── PlaceOrder
+│       │   │   ├── PlaceOrder.jsx
+│       │   │   └── PlaceOrder.css
+│       │   └── Verify
+│       ├── index.css
+│       └── main.jsx
 │
-├── admin/                        # Admin dashboard (React + Vite)
-│   ├── public/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   │   ├── Navbar/
-│   │   │   └── Sidebar/
-│   │   ├── pages/
-│   │   │   ├── Add/
-│   │   │   ├── List/
-│   │   │   └── Orders/
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── vite.config.js
-│   └── package.json
+├── admin
+│   ├── public
+│   └── src
+│       ├── assets
+│       ├── components
+│       │   ├── Navbar
+│       │   └── Sidebar
+│       ├── pages
+│       │   ├── Add
+│       │   ├── List
+│       │   └── Orders
+│       ├── App.jsx
+│       ├── index.css
+│       └── main.jsx
+
+
 
