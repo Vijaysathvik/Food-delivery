@@ -98,5 +98,48 @@ This repository includes the full-stack implementation of a food delivery platfo
 
 ---
 
-## 📂 Project Structure
+Backend
+cd backend
+npm install
+
+Create a .env file in the backend/ folder and add the following:
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
+
+Then start the server:
+
+npm start
+
+Frontend (User App)
+cd frontend
+npm install
+
+Create a .env file in the frontend/ folder and add the following:
+
+REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
+
+Then start the frontend server:
+
+npm start
+
+Admin Dashboard
+cd admin
+npm install
+
+If your admin panel needs any environment variables, create a .env file in the admin/ folder.
+
+Then run:
+
+npm run dev
+
+Stripe Test Card (Optional)
+Use the following card for test payments:
+
+Card Number: 4242 4242 4242 4242
+Expiry Date: Any future date
+CVC: Any 3 digits
+ZIP: Any 5-digit number
 
