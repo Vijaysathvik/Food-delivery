@@ -98,48 +98,50 @@ This repository includes the full-stack implementation of a food delivery platfo
 
 ---
 
-Backend
-cd backend
-npm install
+## 🛠️ Setup and Installation
 
-Create a .env file in the backend/ folder and add the following:
+### Backend  
+cd backend  
+npm install  
 
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-STRIPE_SECRET_KEY=your_stripe_secret_key
+Create a `.env` file in the backend folder and add the following:  
+PORT=5000  
+MONGO_URI=your_mongodb_connection_string  
+JWT_SECRET=your_jwt_secret  
+STRIPE_SECRET_KEY=your_stripe_secret_key  
 
-Then start the server:
+Then start the server:  
+npm start  
 
-npm start
+---  
 
-Frontend (User App)
-cd frontend
-npm install
+### Frontend  
+cd frontend  
+npm install  
 
-Create a .env file in the frontend/ folder and add the following:
+Create a `.env` file in the frontend folder and add the following:  
+REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key  
 
-REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
+Then start the server:  
+npm start  
 
-Then start the frontend server:
+---  
 
-npm start
+### Admin  
+cd admin  
+npm install  
 
-Admin Dashboard
-cd admin
-npm install
+Create a `.env` file in the admin folder if needed.  
 
-If your admin panel needs any environment variables, create a .env file in the admin/ folder.
+Then start the server:  
+npm run dev  
 
-Then run:
+---  
 
-npm run dev
+### Stripe Test Card (Optional)  
+Card Number: 4242 4242 4242 4242  
+Expiry Date: Any future date  
+CVC: Any 3 digits  
+ZIP Code: Any 5-digit number  
 
-Stripe Test Card (Optional)
-Use the following card for test payments:
-
-Card Number: 4242 4242 4242 4242
-Expiry Date: Any future date
-CVC: Any 3 digits
-ZIP: Any 5-digit number
 
