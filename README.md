@@ -99,7 +99,7 @@ This repository includes the full-stack implementation of a food delivery platfo
 ---
 
 ## 🛠️ Setup and Installation
-
+Note: all the dependencies are already present in the package.json file, so do not worry about what packages have been used.
 ### Backend  
 cd backend  
 npm install  
