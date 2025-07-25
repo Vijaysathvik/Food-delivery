@@ -30,46 +30,47 @@ This is a full‑stack food delivery application built using React (frontend), N
 
 Food-delivery/
 │
-├── backend/                          # Node.js + Express backend
-│   ├── config/                       # DB config
+├── backend/                      # Node.js + Express backend
+│   ├── config/
 │   │   └── db.js
-│   ├── controllers/                 # Logic for handling requests
+│   ├── controllers/
 │   │   ├── cartController.js
 │   │   ├── foodController.js
 │   │   ├── orderController.js
 │   │   └── userController.js
-│   ├── middleware/                  # Auth middleware
+│   ├── middleware/
 │   │   └── auth.js
-│   ├── models/                      # Mongoose models
+│   ├── models/
 │   │   ├── foodModel.js
 │   │   ├── orderModel.js
 │   │   └── userModel.js
-│   ├── routes/                      # Express routes
+│   ├── routes/
 │   │   ├── cartRoute.js
 │   │   ├── foodRoute.js
 │   │   ├── orderRoute.js
 │   │   └── userRoute.js
-│   └── uploads/                     # Static folder for uploaded assets (e.g., images)
+│   └── uploads/                 # For storing static files/images
 │
-├── frontend/                         # React client app for customers
+├── frontend/                     # React client for users
 │   ├── public/
 │   ├── src/
-│   │   ├── assets/                  # Images, icons, etc.
-│   │   ├── components/             # Reusable UI components
-│   │   ├── Context/                # Global context providers (Auth, Cart)
-│   │   ├── pages/                  # User-facing pages
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── Context/
+│   │   ├── pages/
 │   │   │   ├── Cart/
 │   │   │   ├── Home/
 │   │   │   ├── MyOrders/
-│   │   │   ├── PlaceOrder/         # Contains PlaceOrder.jsx, PlaceOrder.css
+│   │   │   ├── PlaceOrder/
+│   │   │   │   ├── PlaceOrder.jsx
+│   │   │   │   └── PlaceOrder.css
 │   │   │   └── Verify/
 │   │   ├── index.css
-│   │   ├── main.jsx
+│   │   └── main.jsx
 │   ├── index.html
-│   ├── .gitignore
 │   └── package.json
 │
-├── admin/                            # Admin dashboard in React + Vite
+├── admin/                        # Admin dashboard (React + Vite)
 │   ├── public/
 │   ├── src/
 │   │   ├── assets/
@@ -81,7 +82,8 @@ Food-delivery/
 │   │   │   ├── List/
 │   │   │   └── Orders/
 │   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── index.css
+│   │   ├── index.css
+│   │   └── main.jsx
 │   ├── vite.config.js
 │   └── package.json
+
