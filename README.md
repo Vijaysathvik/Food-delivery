@@ -1,86 +1,102 @@
-# 🍽️ Full‑Stack Food Delivery App
+# 🍽️ Food Delivery – Full Stack App
 
-This is a full‑stack food delivery application built using React (frontend), Node.js/Express (backend), MongoDB (database), and Stripe (payment). Users can browse restaurants, place orders, make payments, and track order status in real time.
+## 📖 About
 
----
+This repository includes the full-stack implementation of a food delivery platform, including:
 
-## 🧩 Tech Stack
-
-- **Frontend:** React.js (create‑react‑app), Axios
-- **Backend:** Node.js, Express.js, REST APIs
-- **Database:** MongoDB (Mongoose ODM)
-- **Payments:** Stripe Integration
-- **Authentication:** JWT‑based login/registration
-- **Routing:** React Router
+- **Backend API** (Node.js + Express + MongoDB)
+- **Frontend** (React app for users to browse and order)
+- **Admin Dashboard** (React + Vite app to manage food items, orders, etc.)
 
 ---
 
-## ⚙️ Key Features
+## 🧱 Tech Stack
 
-- Browse restaurants and menus
-- Add items to cart and checkout
-- Secure user authentication (signup/login)
-- Stripe payment processing
-- Real-time order status updates
-- Admin dashboard for order and menu management
+- **Backend:** Node.js, Express.js, MongoDB, JWT, Stripe
+- **Frontend:** React.js, Axios, React Router, Context API
+- **Admin:** React + Vite, Axios
+- **Styling:** CSS Modules, Plain CSS
 
 ---
 
-## 📁 Project Structure
+## 🔐 Environment Variables
 
-Food-delivery
-├── backend
-│   ├── config
-│   │   └── db.js
-│   ├── controllers
-│   │   ├── cartController.js
-│   │   ├── foodController.js
-│   │   ├── orderController.js
-│   │   └── userController.js
-│   ├── middleware
-│   │   └── auth.js
-│   ├── models
-│   │   ├── foodModel.js
-│   │   ├── orderModel.js
-│   │   └── userModel.js
-│   ├── routes
-│   │   ├── cartRoute.js
-│   │   ├── foodRoute.js
-│   │   ├── orderRoute.js
-│   │   └── userRoute.js
-│   └── uploads
-│
-├── frontend
-│   ├── public
-│   └── src
-│       ├── assets
-│       ├── components
-│       ├── Context
-│       ├── pages
-│       │   ├── Cart
-│       │   ├── Home
-│       │   ├── MyOrders
-│       │   ├── PlaceOrder
-│       │   │   ├── PlaceOrder.jsx
-│       │   │   └── PlaceOrder.css
-│       │   └── Verify
-│       ├── index.css
-│       └── main.jsx
-│
-├── admin
-│   ├── public
-│   └── src
-│       ├── assets
-│       ├── components
-│       │   ├── Navbar
-│       │   └── Sidebar
-│       ├── pages
-│       │   ├── Add
-│       │   ├── List
-│       │   └── Orders
-│       ├── App.jsx
-│       ├── index.css
-│       └── main.jsx
+### Backend (`/backend/.env`)
+| Variable              | Description                        |
+|-----------------------|------------------------------------|
+| `PORT`                | Server port                        |
+| `MONGO_URI`           | MongoDB connection string          |
+| `JWT_SECRET`          | Secret for JWT token signing       |
+| `STRIPE_SECRET_KEY`   | Stripe secret for payment gateway  |
 
+### Frontend (`/frontend/.env`)
+| Variable                        | Description                      |
+|---------------------------------|----------------------------------|
+| `REACT_APP_STRIPE_PUBLIC_KEY`   | Stripe public key for checkout   |
 
+### Admin (`/admin/.env`)
+| Variable           | Description                         |
+|--------------------|-------------------------------------|
+| (If needed)        | Add any admin env variables here     |
+
+---
+
+## 📡 API Routes
+
+### 🔐 Auth (`/api/user`)
+| Method | Route         | Description              |
+|--------|---------------|--------------------------|
+| POST   | `/register`   | Register a new user      |
+| POST   | `/login`      | User login               |
+| GET    | `/profile`    | Get user profile         |
+
+### 🍕 Food (`/api/food`)
+| Method | Route         | Description              |
+|--------|---------------|--------------------------|
+| GET    | `/`           | Get all food items       |
+| POST   | `/add`        | Add a new food item      |
+| PUT    | `/edit/:id`   | Edit a food item         |
+| DELETE | `/delete/:id` | Delete a food item       |
+
+### 🛒 Cart (`/api/cart`)
+| Method | Route         | Description              |
+|--------|---------------|--------------------------|
+| POST   | `/add`        | Add item to cart         |
+| GET    | `/`           | Get user cart            |
+| DELETE | `/remove/:id` | Remove item from cart    |
+
+### 📦 Order (`/api/order`)
+| Method | Route          | Description              |
+|--------|----------------|--------------------------|
+| POST   | `/place`       | Place a new order        |
+| GET    | `/myorders`    | Get current user orders  |
+| PUT    | `/update/:id`  | Update order status      |
+
+---
+
+## 🌐 Frontend Routes (`/frontend`)
+
+| Path              | Description                        |
+|-------------------|------------------------------------|
+| `/`               | Home page showing all food items   |
+| `/cart`           | User cart page                     |
+| `/login`          | Login form                         |
+| `/register`       | User registration form             |
+| `/placeorder`     | Checkout and address input         |
+| `/myorders`       | View previous orders               |
+
+---
+
+## 🛠 Admin Routes (`/admin`)
+
+| Path               | Description                             |
+|--------------------|-----------------------------------------|
+| `/`                | Admin dashboard home                    |
+| `/orders`          | View and update customer orders         |
+| `/add`             | Add new food item                       |
+| `/list`            | List/edit/delete existing food items    |
+
+---
+
+## 📂 Project Structure
 
